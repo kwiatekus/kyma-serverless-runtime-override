@@ -3,8 +3,11 @@ namespace: default
 runtime: python39
 runtimeImageOverride: kwiatekus/python-runtime-debian
 source:
-    sourceType: inline
-    sourcePath: /Users/krzysztofkwiatosz/go/src/github.com/kwiatekus/kyma-serverless-runtime-override/src/custom-runtime
+    sourceType: git
+    url: https://github.com/kwiatekus/kyma-serverless-runtime-override.git
+    repository: kyma-serverless-runtime-override
+    reference: main
+    baseDir: /src/custom-runtime/
 env:
     - name: foo
       value: bar
